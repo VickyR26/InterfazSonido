@@ -1,0 +1,254 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <ImageView
+        android:id="@+id/imageSonido"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        app:srcCompat="@drawable/ic_sonido"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="30dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        />
+
+    <TextView
+        android:id="@+id/textViewSonido"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Media volume"
+        android:textSize="15dp"
+        app:layout_constraintLeft_toRightOf="@id/imageSonido"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="30dp"
+        android:layout_marginLeft="30dp"/>
+
+    <SeekBar
+        android:id="@+id/seekBarSonido"
+        android:layout_width="300dp"
+        android:layout_height="15dp"
+        android:progress="25"
+        android:layout_marginLeft="30dp"
+        app:layout_constraintTop_toBottomOf="@id/textViewSonido"
+        app:layout_constraintLeft_toRightOf="@id/imageSonido"
+        />
+
+    <ImageView
+        android:id="@+id/imageAlarma"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        app:srcCompat="@drawable/ic_despertador"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="30dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/imageSonido"
+        />
+
+    <TextView
+        android:id="@+id/textViewAlarma"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Alarm volume"
+        android:textSize="15dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginLeft="30dp"
+        app:layout_constraintTop_toBottomOf="@id/imageSonido"
+        app:layout_constraintLeft_toRightOf="@id/imageAlarma"
+        />
+
+    <SeekBar
+        android:id="@+id/seekBarAlarma"
+        android:layout_width="300dp"
+        android:layout_height="15dp"
+        android:progress="50"
+        android:layout_marginLeft="30dp"
+        app:layout_constraintTop_toBottomOf="@id/textViewAlarma"
+        app:layout_constraintLeft_toRightOf="@id/imageAlarma" />
+
+    <ImageView
+        android:id="@+id/imageTimbre"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        app:srcCompat="@drawable/ic_timbre"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="30dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/imageAlarma"
+        />
+
+    <TextView
+        android:id="@+id/textViewTimbre"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Ring volume"
+        android:textSize="15dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginLeft="30dp"
+        app:layout_constraintTop_toBottomOf="@id/imageAlarma"
+        app:layout_constraintLeft_toRightOf="@id/imageTimbre" />
+
+    <SeekBar
+        android:id="@+id/seekBarTimbre"
+        android:layout_width="300dp"
+        android:layout_height="15dp"
+        android:progress="75"
+        android:layout_marginLeft="30dp"
+        app:layout_constraintTop_toBottomOf="@id/textViewTimbre"
+        app:layout_constraintLeft_toRightOf="@id/imageAlarma"
+        />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Also vibrate for calls "
+        android:textSize="15dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginLeft="30dp"
+        app:layout_constraintTop_toBottomOf="@id/imageTimbre"
+        app:layout_constraintLeft_toRightOf="@id/imageTimbre" />
+
+    <Switch
+        android:id="@+id/switch1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:layout_marginLeft="100dp"
+        app:layout_constraintLeft_toRightOf="@id/textView4"
+        app:layout_constraintTop_toBottomOf="@id/imageTimbre"
+
+        />
+
+    <View
+        android:id="@+id/divider"
+        android:layout_width="wrap_content"
+        android:layout_height="1dp"
+        android:background="?android:attr/listDivider"
+        android:layout_marginTop="25dp"
+        app:layout_constraintTop_toBottomOf="@id/textView4"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/textViewNotDisturb"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Do Not Disturb"
+        android:textSize="15dp"
+        app:layout_constraintTop_toBottomOf="@id/divider"
+        android:layout_marginTop="30dp"
+        app:layout_constraintLeft_toRightOf="@id/imageTimbre"
+        android:layout_marginLeft="30dp"/>
+
+    <TextView
+        android:id="@+id/textViewRules"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="2 Rules"
+        android:textSize="12dp"
+        app:layout_constraintTop_toBottomOf="@id/textViewNotDisturb"
+        app:layout_constraintLeft_toRightOf="@id/imageTimbre"
+        android:layout_marginLeft="30dp" />
+
+    <View
+        android:id="@+id/divider2"
+        android:layout_width="409dp"
+        android:layout_height="1dp"
+        android:background="?android:attr/listDivider"
+        app:layout_constraintTop_toBottomOf="@id/textViewRules"
+        android:layout_marginTop="30dp"
+        tools:ignore="MissingConstraints"/>
+
+    <TextView
+        android:id="@+id/textViewPhoneR"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Phone ringtone"
+        android:textSize="15dp"
+        app:layout_constraintTop_toBottomOf="@id/divider2"
+        android:layout_marginTop="30dp"
+        app:layout_constraintLeft_toRightOf="@id/imageTimbre"
+        android:layout_marginLeft="30dp"/>
+
+    <TextView
+        android:id="@+id/textViewCrackle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Crakle"
+        android:textSize="12dp"
+        app:layout_constraintTop_toBottomOf="@id/textViewPhoneR"
+        app:layout_constraintLeft_toRightOf="@id/imageTimbre"
+        android:layout_marginLeft="30dp"
+        />
+
+    <TextView
+        android:id="@+id/textViewNotificacion"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Default notification sound"
+        android:textSize="15dp"
+        app:layout_constraintTop_toBottomOf="@id/textViewCrackle"
+        android:layout_marginTop="30dp"
+        app:layout_constraintLeft_toRightOf="@id/imageTimbre"
+        android:layout_marginLeft="30dp"
+        />
+
+    <TextView
+        android:id="@+id/textViewPopcorn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Popcorn"
+        android:textSize="12dp"
+        app:layout_constraintTop_toBottomOf="@id/textViewNotificacion"
+        app:layout_constraintLeft_toRightOf="@id/imageTimbre"
+        android:layout_marginLeft="30dp"
+        />
+
+    <TextView
+        android:id="@+id/textViewDefaultAlarm"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Default alarm sound"
+        android:textSize="15dp"
+        app:layout_constraintTop_toBottomOf="@id/textViewPopcorn"
+        android:layout_marginTop="30dp"
+        app:layout_constraintLeft_toRightOf="@id/imageTimbre"
+        android:layout_marginLeft="30dp" />
+
+    <TextView
+        android:id="@+id/textViewBrightMorning"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Bright morning"
+        android:textSize="12dp"
+        app:layout_constraintTop_toBottomOf="@id/textViewDefaultAlarm"
+        app:layout_constraintLeft_toRightOf="@id/imageTimbre"
+        android:layout_marginLeft="30dp"
+        />
+
+    <View
+        android:id="@+id/divider3"
+        android:layout_width="409dp"
+        android:layout_height="1dp"
+        android:background="?android:attr/listDivider"
+        app:layout_constraintBottom_toTopOf="@id/textViewOther"
+        android:layout_marginBottom="10dp"
+        android:layout_marginTop="30dp"
+        tools:ignore="MissingConstraints"
+        />
+
+    <TextView
+        android:id="@+id/textViewOther"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Other sounds and vibrations"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toRightOf="@id/imageTimbre"
+        android:layout_marginLeft="30dp"/>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
